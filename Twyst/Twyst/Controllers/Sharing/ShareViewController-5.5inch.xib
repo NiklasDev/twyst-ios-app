@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareViewController">
+            <connections>
+                <outlet property="btnBack" destination="mTW-s4-0hV" id="jwk-Q0-iwq"/>
+                <outlet property="btnHome" destination="aUG-Av-tj0" id="aST-8P-aLO"/>
+                <outlet property="btnPass" destination="EgJ-Ek-5gn" id="kzI-rI-Pnn"/>
+                <outlet property="btnReplies" destination="wWf-Ea-i1j" id="yTO-1n-4nf"/>
+                <outlet property="imageDArrow" destination="qu4-Jg-JDB" id="XVA-tj-Nyt"/>
+                <outlet property="progressSend" destination="BPU-d6-rkh" id="IXL-Ld-ZYv"/>
+                <outlet property="rightButtonContainer" destination="Ee7-Tn-BPg" id="jor-lZ-bK5"/>
+                <outlet property="searchBarContainer" destination="KbK-H0-Fmk" id="NbM-Gd-46A"/>
+                <outlet property="searchResultContainer" destination="hDA-b9-IpQ" id="zuh-ru-jem"/>
+                <outlet property="sendBtnContainer" destination="rga-W2-uhn" id="ZTy-cH-Vj8"/>
+                <outlet property="tableViewFriends" destination="7VK-vx-evL" id="6O3-gO-Yt3"/>
+                <outlet property="tableViewSearch" destination="N5H-vP-OJX" id="5Io-95-j7o"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewSending" destination="VMN-QQ-5XN" id="jSk-jf-Tl2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vuz-KW-Yln">
+                    <rect key="frame" x="186" y="358" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7VK-vx-evL">
+                    <rect key="frame" x="0.0" y="71" width="414" height="665"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ANl-gZ-aR7"/>
+                        <outlet property="delegate" destination="-1" id="KIi-kj-foB"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" id="rga-W2-uhn" userLabel="Send Button View">
+                    <rect key="frame" x="0.0" y="736" width="414" height="65"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="We6-im-QwB" userLabel="Button - Send">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <state key="normal" image="btn-share-send-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-share-send-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnSendTouch:" destination="-1" eventType="touchUpInside" id="lmf-Ef-C93"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="wWf-Ea-i1j" userLabel="Button - Replies">
+                            <rect key="frame" x="-9" y="4" width="144" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-share-replies-off-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="btn-share-replies-on-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnRepliesTouch:" destination="-1" eventType="touchUpInside" id="xn7-H7-mO8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="EgJ-Ek-5gn" userLabel="Button - Pass">
+                            <rect key="frame" x="133" y="4" width="100" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-share-pass-off-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="btn-share-pass-on-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnPassTouch:" destination="-1" eventType="touchUpInside" id="Hx5-Hy-cUf"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-share-double-arrow-5.5inch@3x.png" id="qu4-Jg-JDB">
+                            <rect key="frame" x="366" y="19" width="28" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="hDA-b9-IpQ" userLabel="Search Result Container">
+                    <rect key="frame" x="0.0" y="71" width="414" height="665"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="N5H-vP-OJX" userLabel="Table View - Search Result">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="665"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="pma-n2-i71"/>
+                                <outlet property="delegate" destination="-1" id="tZC-CG-5fD"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="h3v-sc-4Aq" userLabel="Header View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-bar-violet.png" id="bkT-Yv-sZi">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aUG-Av-tj0" userLabel="Button - Home">
+                            <rect key="frame" x="10" y="27" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-share-home-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-share-home-on-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnHomeTouch:" destination="-1" eventType="touchUpInside" id="oyl-m6-ZuD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mTW-s4-0hV" userLabel="Button - Back">
+                            <rect key="frame" x="10" y="27" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-landing-back-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-landing-back-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnBackTouch:" destination="-1" eventType="touchUpInside" id="ZjN-Hz-OLv"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N66-vP-b05" userLabel="Label - Pass" customClass="HeaderLabel">
+                            <rect key="frame" x="102" y="26" width="210" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                            <color key="textColor" red="0.19215686274509805" green="0.18431372549019609" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="Ee7-Tn-BPg" userLabel="Button Container">
+                            <rect key="frame" x="362" y="27" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1dS-mf-agT" userLabel="Button - Search">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="btn-share-search-on-5.5inch@3x.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted" image="btn-share-search-hl-5.5inch@3x.png"/>
+                                    <connections>
+                                        <action selector="handleBtnSearchTouch:" destination="-1" eventType="touchUpInside" id="bpr-hh-eVt"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" id="KbK-H0-Fmk" userLabel="Search Bar Container">
+                    <rect key="frame" x="0.0" y="24" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" id="VMN-QQ-5XN" userLabel="View - Sending">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PM4-IC-ps3" userLabel="Label - Help">
+                            <rect key="frame" x="0.0" y="218" width="414" height="32"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24.399999618530273"/>
+                            <color key="textColor" red="0.2274509804" green="0.1960784314" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="BPU-d6-rkh" userLabel="View - YLProgressBar" customClass="YLProgressBar">
+                            <rect key="frame" x="91" y="272" width="233" height="8"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.97999999999999998" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="584" y="734"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn-landing-back-hl-5.5inch@3x.png" width="36" height="60"/>
+        <image name="btn-landing-back-on-5.5inch@3x.png" width="36" height="60"/>
+        <image name="btn-share-home-on-5.5inch@3x.png" width="75" height="60"/>
+        <image name="btn-share-pass-off-5.5inch@3x.png" width="192" height="51"/>
+        <image name="btn-share-pass-on-5.5inch@3x.png" width="192" height="51"/>
+        <image name="btn-share-replies-off-5.5inch@3x.png" width="252" height="51"/>
+        <image name="btn-share-replies-on-5.5inch@3x.png" width="252" height="51"/>
+        <image name="btn-share-search-hl-5.5inch@3x.png" width="66" height="66"/>
+        <image name="btn-share-search-on-5.5inch@3x.png" width="66" height="66"/>
+        <image name="btn-share-send-hl-5.5inch@3x.png" width="1242" height="195"/>
+        <image name="btn-share-send-on-5.5inch@3x.png" width="1242" height="195"/>
+        <image name="ic-share-double-arrow-5.5inch@3x.png" width="84" height="75"/>
+        <image name="top-bar-violet.png" width="320" height="65"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

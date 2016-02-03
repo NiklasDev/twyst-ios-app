@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditVideoViewController">
+            <connections>
+                <outlet property="bottomBackground" destination="fVv-p7-klh" id="eum-nr-Ku6"/>
+                <outlet property="bottomContainer" destination="1Vz-p8-BvQ" id="pNK-jH-mES"/>
+                <outlet property="btnClear" destination="pwC-xt-MRo" id="i1b-9Y-g0d"/>
+                <outlet property="btnCover" destination="IO6-Bd-kEV" id="LK4-vw-D9x"/>
+                <outlet property="btnDraw" destination="25z-NH-7Xk" id="GGK-2B-fK6"/>
+                <outlet property="btnReplyCancel" destination="Q1f-v2-meT" id="ybc-1t-B50"/>
+                <outlet property="btnReplyHome" destination="0XX-Pl-7yV" id="jif-os-8gb"/>
+                <outlet property="btnReplyPass" destination="TcB-DC-Guy" id="v0f-7g-Yja"/>
+                <outlet property="btnReplySend" destination="Znz-hx-XW8" id="d3y-l4-1Iw"/>
+                <outlet property="btnTrim" destination="mS2-4f-hvM" id="NtJ-uu-Xbd"/>
+                <outlet property="btnUndo" destination="wUa-Aq-dJG" id="ULV-S9-oGd"/>
+                <outlet property="buttonContainer" destination="kpQ-BQ-215" id="qiM-Tp-J0N"/>
+                <outlet property="drawButtonContainer" destination="L2j-0x-hZg" id="JUE-Tz-KAt"/>
+                <outlet property="drawTopBarContainer" destination="Da1-wP-sbc" id="lb7-lA-FvG"/>
+                <outlet property="drawView" destination="gyo-ZD-R3N" id="Vv5-eK-hCh"/>
+                <outlet property="drawingContainer" destination="hYh-ei-MXf" id="az4-9V-bZv"/>
+                <outlet property="editorContainer" destination="gHM-dP-XTG" id="JR4-qU-lnz"/>
+                <outlet property="imagePretzel" destination="bkO-Vd-ndW" id="3TP-gF-iTp"/>
+                <outlet property="labelReplyHelp1" destination="dXh-qw-baM" id="2hf-eX-zgl"/>
+                <outlet property="labelReplyHelp2" destination="TtN-io-DpU" id="3VD-qM-my2"/>
+                <outlet property="labelReplyHelp3" destination="rX4-Ks-wfB" id="JPR-tq-rXs"/>
+                <outlet property="labelReplyHelp4" destination="DHg-av-hi4" id="GD0-dv-6Qd"/>
+                <outlet property="largeImageContainer" destination="oo8-wS-PUw" id="BZr-75-ahi"/>
+                <outlet property="progressReply" destination="O9k-LV-7fv" id="0cL-t9-kdF"/>
+                <outlet property="spectrumView" destination="qFj-uW-EaY" id="uoo-11-xl6"/>
+                <outlet property="topBarContainer" destination="uzf-PL-bVI" id="sUA-mf-Q3v"/>
+                <outlet property="tutorialContainer" destination="I1r-nt-kFF" id="ZBC-eU-9iX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewCreating" destination="oiQ-LG-LVs" id="btb-Eq-OWW"/>
+                <outlet property="viewReplying" destination="pKh-ls-T4M" id="Lfx-9h-VDk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="oo8-wS-PUw" userLabel="Large Image Container">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="hYh-ei-MXf" userLabel="Drawing Container">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="gyo-ZD-R3N" userLabel="Drawing View" customClass="BezierInterpView">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" id="qFj-uW-EaY" customClass="HVSpectrumView">
+                            <rect key="frame" x="333" y="508" width="30" height="89"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="uzf-PL-bVI" userLabel="Top Bar">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gro-qg-xhS" userLabel="Button - Cancel">
+                            <rect key="frame" x="5" y="4" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" image="btn-edit-back-arrow-on-4.7inch.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-edit-back-arrow-hl-4.7inch.png">
+                                <color key="titleColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="handleBtnCloseTouch:" destination="-1" eventType="touchUpInside" id="utS-7g-OVK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NES-Xw-DTF" userLabel="Button - Advance">
+                            <rect key="frame" x="324" y="4" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" image="btn-edit-advance-on-4.7inch.png">
+                                <color key="titleColor" red="0.0" green="0.98823529409999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled">
+                                <color key="titleColor" red="0.0" green="0.98823529409999999" blue="0.91764705879999997" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="highlighted" image="btn-edit-advance-hl-4.7inch.png">
+                                <color key="titleColor" red="0.0" green="0.78039215689999997" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="handleBtnAdvanceTouch:" destination="-1" eventType="touchUpInside" id="5Dj-Vy-Zqr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" id="Da1-wP-sbc" userLabel="Draw Top Bar">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qvX-Ey-yhc" userLabel="Button - Cancel">
+                            <rect key="frame" x="7" y="4" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" image="btn-edit-cancel-x-on-4.7inch.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-edit-cancel-x-hl-4.7inch.png">
+                                <color key="titleColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="handleBtnDrawCancelTouch:" destination="-1" eventType="touchUpInside" id="aRO-66-TtL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HI5-zi-Wrz" userLabel="Button - Apply">
+                            <rect key="frame" x="325" y="4" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" image="btn-edit-ok-check-on-4.7inch.png">
+                                <color key="titleColor" red="0.0" green="0.98823529409999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled">
+                                <color key="titleColor" red="0.0" green="0.98823529409999999" blue="0.91764705879999997" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="highlighted" image="btn-edit-ok-check-hl-4.7inch.png">
+                                <color key="titleColor" red="0.0" green="0.78039215689999997" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="handleBtnDrawApplyTouch:" destination="-1" eventType="touchUpInside" id="mnF-cZ-Aqq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="fVv-p7-klh" userLabel="BottomBackground">
+                    <rect key="frame" x="0.0" y="486" width="375" height="181"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="1Vz-p8-BvQ" userLabel="Bottom Container">
+                    <rect key="frame" x="0.0" y="486" width="375" height="181"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <view alpha="0.98000001907348633" contentMode="scaleToFill" id="y7Y-7K-DMz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" id="kpQ-BQ-215" userLabel="Button Container">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="mS2-4f-hvM" userLabel="Button Trim">
+                                    <rect key="frame" x="12" y="-1" width="64" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <state key="normal" image="btn-edit-effect-trim-on-4.7inch.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="btn-edit-effect-trim-sel-4.7inch.png"/>
+                                    <connections>
+                                        <action selector="handleBtnTrimTouch:" destination="-1" eventType="touchUpInside" id="pYT-Qb-WPq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="IO6-Bd-kEV" userLabel="Button Cover">
+                                    <rect key="frame" x="155" y="-1" width="64" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <state key="normal" image="btn-edit-effect-cover-on-4.7inch.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="btn-edit-effect-cover-sel-4.7inch.png"/>
+                                    <connections>
+                                        <action selector="handleBtnCoverTouch:" destination="-1" eventType="touchUpInside" id="jsY-wV-G6J"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view alpha="0.0" contentMode="scaleToFill" id="L2j-0x-hZg" userLabel="Drawing Button Container">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wUa-Aq-dJG" userLabel="Button Undo">
+                                    <rect key="frame" x="8" y="-1" width="64" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="btn-edit-draw-undo-on-4.7inch.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="disabled" image="btn-edit-draw-undo-off-4.7inch.png"/>
+                                    <state key="highlighted" image="btn-edit-draw-undo-hl-4.7inch.png"/>
+                                    <connections>
+                                        <action selector="handleBtnUndoTouch:" destination="-1" eventType="touchUpInside" id="cAc-s9-6Ys"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pwC-xt-MRo" userLabel="Button Clear All">
+                                    <rect key="frame" x="155" y="-1" width="64" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="btn-edit-draw-clear-all-on-4.7inch.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="disabled" image="btn-edit-draw-clear-all-off-4.7inch.png"/>
+                                    <state key="highlighted" image="btn-edit-draw-clear-all-hl-4.7inch.png"/>
+                                    <connections>
+                                        <action selector="handleBtnClearAllTouch:" destination="-1" eventType="touchUpInside" id="Hf8-Aj-EWY"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="25z-NH-7Xk" userLabel="Button Draw">
+                            <rect key="frame" x="300" y="-1" width="64" height="50"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <state key="normal" image="btn-edit-effect-draw-on-4.7inch.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled" image="btn-edit-effect-draw-off-4.7inch.png"/>
+                            <state key="selected" image="btn-edit-effect-draw-hl-4.7inch.png"/>
+                            <connections>
+                                <action selector="handleBtnDrawTouch:" destination="-1" eventType="touchUpInside" id="2hP-6j-98B"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" id="gHM-dP-XTG" userLabel="Editor Container">
+                            <rect key="frame" x="0.0" y="50" width="375" height="131"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" id="oiQ-LG-LVs" userLabel="View - Creating">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-edit-pretzel-4.7inch.png" id="bkO-Vd-ndW">
+                            <rect key="frame" x="164" y="210" width="47" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nzt-6z-EpH">
+                            <rect key="frame" x="123" y="270" width="144" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22.799999237060547"/>
+                            <color key="textColor" red="0.2274509804" green="0.1960784314" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" id="pKh-ls-T4M" userLabel="View - Replying">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q1f-v2-meT" userLabel="Button - Cancel">
+                            <rect key="frame" x="10" y="5" width="60" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.2274509804" green="0.1960784314" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.35686274509999999" green="0.3411764706" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="handleBtnReplyCancelTouch:" destination="-1" eventType="touchUpInside" id="P6n-XF-sUD"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dXh-qw-baM" userLabel="Label - Help 1">
+                            <rect key="frame" x="0.0" y="164" width="375" height="32"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22.399999618530273"/>
+                            <color key="textColor" red="0.2274509804" green="0.1960784314" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="send your reply?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TtN-io-DpU" userLabel="Label - Help 2">
+                            <rect key="frame" x="0.0" y="196" width="375" height="32"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22.399999618530273"/>
+                            <color key="textColor" red="0.2274509804" green="0.1960784314" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Replying" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rX4-Ks-wfB" userLabel="Label - Help 3">
+                            <rect key="frame" x="0.0" y="196" width="375" height="32"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22.399999618530273"/>
+                            <color key="textColor" red="0.2274509804" green="0.1960784314" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DHg-av-hi4" userLabel="Label - Help 4">
+                            <rect key="frame" x="0.0" y="196" width="375" height="32"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22.399999618530273"/>
+                            <color key="textColor" red="0.2274509804" green="0.1960784314" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="O9k-LV-7fv" userLabel="View - YLProgressBar" customClass="YLProgressBar">
+                            <rect key="frame" x="82" y="247" width="210" height="7"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Znz-hx-XW8" userLabel="Button - Send">
+                            <rect key="frame" x="125" y="320" width="124" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-edit-send-on-4.7inch.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-edit-send-hl-4.7inch.png"/>
+                            <connections>
+                                <action selector="handleBtnReplySendTouch:" destination="-1" eventType="touchUpInside" id="pgM-n1-Lad"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0XX-Pl-7yV" userLabel="Button - Home">
+                            <rect key="frame" x="54" y="320" width="124" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-edit-home-on-4.7inch.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-edit-home-hl-4.7inch.png"/>
+                            <connections>
+                                <action selector="handleBtnReplyHomeTouch:" destination="-1" eventType="touchUpInside" id="Ay9-jh-sQa"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TcB-DC-Guy" userLabel="Button - Pass">
+                            <rect key="frame" x="200" y="320" width="124" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-edit-pass-on-4.7inch.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-edit-pass-hl-4.7inch.png"/>
+                            <connections>
+                                <action selector="handleBtnReplyPassTouch:" destination="-1" eventType="touchUpInside" id="cVV-r3-kzb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.97999999999999998" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="I1r-nt-kFF" userLabel="Tutorial Container">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="394.5" y="348.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn-edit-advance-hl-4.7inch.png" width="22" height="20"/>
+        <image name="btn-edit-advance-on-4.7inch.png" width="22" height="20"/>
+        <image name="btn-edit-back-arrow-hl-4.7inch.png" width="13" height="20"/>
+        <image name="btn-edit-back-arrow-on-4.7inch.png" width="13" height="20"/>
+        <image name="btn-edit-cancel-x-hl-4.7inch.png" width="19" height="19"/>
+        <image name="btn-edit-cancel-x-on-4.7inch.png" width="19" height="19"/>
+        <image name="btn-edit-draw-clear-all-hl-4.7inch.png" width="32" height="32"/>
+        <image name="btn-edit-draw-clear-all-off-4.7inch.png" width="32" height="32"/>
+        <image name="btn-edit-draw-clear-all-on-4.7inch.png" width="32" height="32"/>
+        <image name="btn-edit-draw-undo-hl-4.7inch.png" width="32" height="32"/>
+        <image name="btn-edit-draw-undo-off-4.7inch.png" width="32" height="32"/>
+        <image name="btn-edit-draw-undo-on-4.7inch.png" width="32" height="32"/>
+        <image name="btn-edit-effect-cover-on-4.7inch.png" width="40" height="32"/>
+        <image name="btn-edit-effect-cover-sel-4.7inch.png" width="40" height="32"/>
+        <image name="btn-edit-effect-draw-hl-4.7inch.png" width="32" height="32"/>
+        <image name="btn-edit-effect-draw-off-4.7inch.png" width="32" height="32"/>
+        <image name="btn-edit-effect-draw-on-4.7inch.png" width="32" height="32"/>
+        <image name="btn-edit-effect-trim-on-4.7inch.png" width="40" height="32"/>
+        <image name="btn-edit-effect-trim-sel-4.7inch.png" width="40" height="32"/>
+        <image name="btn-edit-home-hl-4.7inch.png" width="124" height="41"/>
+        <image name="btn-edit-home-on-4.7inch.png" width="124" height="41"/>
+        <image name="btn-edit-ok-check-hl-4.7inch.png" width="25" height="18"/>
+        <image name="btn-edit-ok-check-on-4.7inch.png" width="25" height="18"/>
+        <image name="btn-edit-pass-hl-4.7inch.png" width="124" height="41"/>
+        <image name="btn-edit-pass-on-4.7inch.png" width="124" height="41"/>
+        <image name="btn-edit-send-hl-4.7inch.png" width="124" height="41"/>
+        <image name="btn-edit-send-on-4.7inch.png" width="124" height="41"/>
+        <image name="ic-edit-pretzel-4.7inch.png" width="47" height="37"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

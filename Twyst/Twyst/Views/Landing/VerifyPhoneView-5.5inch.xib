@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="49" customClass="VerifyPhoneView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s verify your phone number to get started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e1z-FL-01N" userLabel="Label - Help">
+                    <rect key="frame" x="0.0" y="87" width="414" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15.699999809265137"/>
+                    <color key="textColor" red="0.34509803921568627" green="0.34901960784313724" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-landing-plus-1-5.5inch@3x.png" id="yev-oa-DVZ">
+                    <rect key="frame" x="35" y="123" width="67" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Phone Number" minimumFontSize="17" id="ezD-Xm-9BD" userLabel="TextField - Mobile Number" customClass="LandingTextField">
+                    <rect key="frame" x="117" y="124" width="210" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="textColor" red="0.22745098039215686" green="0.19607843137254902" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15.699999809265137"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                            <color key="value" red="0.1529411765" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-landing-verify-line-5.5inch@3x.png" id="Vlh-Mm-enc">
+                    <rect key="frame" x="26" y="196" width="359" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="DAr-vQ-NbL">
+                    <rect key="frame" x="0.0" y="221" width="414" height="414"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="quX-Ea-l7p" userLabel="Button - 1">
+                            <rect key="frame" x="31" y="21" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-1-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-1-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="8MX-Av-Fbw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PTG-EW-cy1" userLabel="Button - 2">
+                            <rect key="frame" x="170" y="21" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-2-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-2-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="28S-hh-Gfp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fiv-vR-ojV" userLabel="Button - 3">
+                            <rect key="frame" x="310" y="21" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-3-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-3-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="N2t-oG-vcJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ocd-Cs-Q1T" userLabel="Button - 4">
+                            <rect key="frame" x="31" y="127" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-4-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-4-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="Dwx-x0-HRf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6O7-jA-l13" userLabel="Button - 5">
+                            <rect key="frame" x="170" y="127" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-5-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-5-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="29Y-eh-kCO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bw6-4X-Fa8" userLabel="Button - 6">
+                            <rect key="frame" x="310" y="127" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-6-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-6-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="2Lc-SX-R5J"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AzF-Ie-OCb" userLabel="Button - 7">
+                            <rect key="frame" x="31" y="231" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-7-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-7-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="d5u-WJ-hIS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jIq-Om-yDD" userLabel="Button - 8">
+                            <rect key="frame" x="170" y="231" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-8-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-8-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="3JF-dJ-jRb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Asa-HO-CaR" userLabel="Button - 9">
+                            <rect key="frame" x="310" y="231" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-9-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-9-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="oNI-fZ-vLb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XY4-3j-fCO" userLabel="Button - 0">
+                            <rect key="frame" x="170" y="330" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-0-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-0-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnNumber:" destination="49" eventType="touchUpInside" id="8Id-ha-7Jn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W80-JK-tXQ" userLabel="Button - x">
+                            <rect key="frame" x="310" y="329" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="numbers-x-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="numbers-x-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnXTouch:" destination="49" eventType="touchUpInside" id="1CV-Hr-LSS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wdF-GQ-juK" userLabel="Button - Next">
+                    <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="btn-landing-verify-ok-on-5.5inch@3x.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled" image="btn-landing-verify-ok-off-5.5inch@3x.png"/>
+                    <state key="highlighted" image="btn-landing-verify-ok-hl-5.5inch@3x.png"/>
+                    <connections>
+                        <action selector="handleBtnNextTouch:" destination="49" eventType="touchUpInside" id="xUu-8f-SEu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <connections>
+                <outlet property="btnNext" destination="wdF-GQ-juK" id="7hr-2C-8iE"/>
+                <outlet property="hintLabel" destination="e1z-FL-01N" id="pMX-dY-yTi"/>
+                <outlet property="keyboardSeparator" destination="Vlh-Mm-enc" id="CMQ-vm-229"/>
+                <outlet property="keyboardView" destination="DAr-vQ-NbL" id="BUV-fa-qBV"/>
+                <outlet property="phoneField" destination="ezD-Xm-9BD" id="XPp-3s-5jf"/>
+                <outlet property="phoneNumberField" destination="ezD-Xm-9BD" id="2fe-P4-7Fl"/>
+                <outlet property="startPhoneNumber" destination="yev-oa-DVZ" id="kKe-uR-Vut"/>
+            </connections>
+            <point key="canvasLocation" x="117" y="369"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn-landing-verify-ok-hl-5.5inch@3x.png" width="1242" height="150"/>
+        <image name="btn-landing-verify-ok-off-5.5inch@3x.png" width="1242" height="150"/>
+        <image name="btn-landing-verify-ok-on-5.5inch@3x.png" width="1242" height="150"/>
+        <image name="ic-landing-plus-1-5.5inch@3x.png" width="201" height="105"/>
+        <image name="ic-landing-verify-line-5.5inch@3x.png" width="1077" height="51"/>
+        <image name="numbers-0-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-0-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-1-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-1-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-2-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-2-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-3-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-3-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-4-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-4-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-5-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-5-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-6-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-6-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-7-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-7-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-8-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-8-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-9-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-9-on-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-x-hl-5.5inch@3x.png" width="222" height="222"/>
+        <image name="numbers-x-on-5.5inch@3x.png" width="222" height="222"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

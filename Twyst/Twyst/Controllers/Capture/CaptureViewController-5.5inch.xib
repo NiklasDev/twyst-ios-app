@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaptureViewController">
+            <connections>
+                <outlet property="btnAdvance" destination="zeQ-2H-DAN" id="Jet-kn-ZZI"/>
+                <outlet property="btnClose" destination="m6t-ci-ZGU" id="xwL-qJ-5Yq"/>
+                <outlet property="btnDelete" destination="pA8-uR-j9f" id="pXk-lW-0ys"/>
+                <outlet property="btnFlash" destination="Z2P-tE-ZT2" id="cpu-Z7-4GW"/>
+                <outlet property="btnFlip" destination="82P-AU-SFO" id="0MS-j7-i8b"/>
+                <outlet property="btnGhost" destination="26e-tJ-USL" id="uxU-g0-IZN"/>
+                <outlet property="btnShutter" destination="Oih-qe-47A" id="EtW-Pm-nzD"/>
+                <outlet property="btnUpload" destination="78x-Nq-5xh" id="nph-JZ-wN7"/>
+                <outlet property="cameraContainer" destination="UOF-wv-jKl" id="ylE-Fc-L1Z"/>
+                <outlet property="menuSeparator" destination="HAm-vA-9Wr" id="aPB-eQ-r1Z"/>
+                <outlet property="tutorialContainer" destination="ejE-HX-EWN" id="eeV-7r-WpN"/>
+                <outlet property="videoProgressBar" destination="grP-Kr-kGU" id="dhd-XB-OOp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="UOF-wv-jKl" userLabel="Camera Container">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m6t-ci-ZGU" userLabel="Button - Close">
+                    <rect key="frame" x="8" y="6" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="btn-camera-close-on.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="btn-camera-close-hl.png"/>
+                    <connections>
+                        <action selector="handleBtnCloseCameraTouch:" destination="-1" eventType="touchUpInside" id="UlT-i2-sTq"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" id="grP-Kr-kGU" customClass="CameraVideoProgressBar">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="asc-zP-KIh" userLabel="Middle Container">
+                    <rect key="frame" x="0.0" y="536" width="414" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="82P-AU-SFO" userLabel="Flip Button">
+                            <rect key="frame" x="32" y="1" width="60" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                            <state key="normal" image="btn-camera-flip-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="btn-camera-flip-hl-5.5inch@3x.png"/>
+                            <state key="highlighted" image="btn-camera-flip-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnRotateTouch:" destination="-1" eventType="touchUpInside" id="k0r-J4-3yb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Z2P-tE-ZT2" userLabel="Flash Button">
+                            <rect key="frame" x="127" y="1" width="60" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                            <state key="normal" image="btn-camera-flash-off-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="btn-camera-flash-on-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnFlashTouch:" destination="-1" eventType="touchUpInside" id="rEs-kP-wcA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="78x-Nq-5xh" userLabel="Upload Button">
+                            <rect key="frame" x="223" y="1" width="60" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                            <state key="normal" image="btn-camera-upload-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled" image="btn-camera-upload-dis-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnUploadTouch:" destination="-1" eventType="touchUpInside" id="jek-b8-9O3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="26e-tJ-USL" userLabel="Ghost Button">
+                            <rect key="frame" x="318" y="1" width="60" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                            <state key="normal" image="btn-camera-bat-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-camera-bat-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnGhostTouch:" destination="-1" eventType="touchUpInside" id="Xxw-gN-tRe"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.97999999999999998" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="NED-yn-jKg" userLabel="Bottom Container">
+                    <rect key="frame" x="0.0" y="601" width="414" height="135"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pA8-uR-j9f" userLabel="Delete Button">
+                            <rect key="frame" x="57" y="37" width="60" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-camera-delete-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-camera-delete-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnDeleteTouch:" destination="-1" eventType="touchUpInside" id="E7Z-Bd-c8P"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zeQ-2H-DAN" userLabel="Advance Button">
+                            <rect key="frame" x="297" y="37" width="60" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-camera-advance-on-5.5inch@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-camera-advance-hl-5.5inch@3x.png"/>
+                            <connections>
+                                <action selector="handleBtnAdvanceTouch:" destination="-1" eventType="touchUpInside" id="5SR-d0-nAP"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" id="Oih-qe-47A" userLabel="Shutter Button" customClass="CameraCaptureButton">
+                            <rect key="frame" x="163" y="23" width="89" height="89"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.97999999999999998" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-camera-separator.png" id="HAm-vA-9Wr">
+                    <rect key="frame" x="38" y="601" width="338" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="ejE-HX-EWN" userLabel="View - Tutor Container">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="438" y="397"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn-camera-advance-hl-5.5inch@3x.png" width="117" height="96"/>
+        <image name="btn-camera-advance-on-5.5inch@3x.png" width="117" height="96"/>
+        <image name="btn-camera-bat-hl-5.5inch@3x.png" width="162" height="96"/>
+        <image name="btn-camera-bat-on-5.5inch@3x.png" width="162" height="96"/>
+        <image name="btn-camera-close-hl.png" width="20" height="20"/>
+        <image name="btn-camera-close-on.png" width="20" height="20"/>
+        <image name="btn-camera-delete-hl-5.5inch@3x.png" width="126" height="111"/>
+        <image name="btn-camera-delete-on-5.5inch@3x.png" width="126" height="111"/>
+        <image name="btn-camera-flash-off-5.5inch@3x.png" width="63" height="96"/>
+        <image name="btn-camera-flash-on-5.5inch@3x.png" width="63" height="96"/>
+        <image name="btn-camera-flip-hl-5.5inch@3x.png" width="105" height="96"/>
+        <image name="btn-camera-flip-on-5.5inch@3x.png" width="105" height="96"/>
+        <image name="btn-camera-upload-dis-5.5inch@3x.png" width="93" height="96"/>
+        <image name="btn-camera-upload-on-5.5inch@3x.png" width="93" height="96"/>
+        <image name="ic-camera-separator.png" width="300" height="1"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

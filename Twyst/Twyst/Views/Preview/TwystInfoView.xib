@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Seravek.ttc">
+            <string>Seravek-Medium</string>
+            <string>Seravek-Light</string>
+            <string>Seravek</string>
+            <string>Seravek</string>
+            <string>Seravek</string>
+            <string>Seravek-Medium</string>
+            <string>Seravek-Medium</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="49" customClass="TwystInfoView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="rd4-RL-68T" userLabel="View - Info Container">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ie0-0d-iRx" userLabel="Image View - Creator">
+                            <rect key="frame" x="118" y="77" width="85" height="85"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="sl6-y3-QDo" appends="YES" id="hmP-Wc-Oeo"/>
+                            </connections>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="GeR-v6-wep" userLabel="Image View - Passer">
+                            <rect key="frame" x="179" y="121" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amandaoleander" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Okf-0h-QrH" userLabel="Label - Real Name">
+                            <rect key="frame" x="0.0" y="173" width="320" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Seravek-Medium" family="Seravek" pointSize="18"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AmandaOleander" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DBe-WZ-VqC" userLabel="Label - User Name">
+                            <rect key="frame" x="0.0" y="193" width="320" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Seravek-Light" family="Seravek" pointSize="14"/>
+                            <color key="textColor" red="0.64313725490196072" green="0.64313725490196072" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="kKF-n6-RHI" userLabel="View - View Count">
+                            <rect key="frame" x="0.0" y="229" width="320" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gxe-9f-Cx1" userLabel="Label - Theme">
+                            <rect key="frame" x="19" y="273" width="282" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <string key="text">“Twyst me a photo of what you’re eating
+for breakfast today. Who’s hungry.”</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="nC7-VD-BVQ">
+                            <rect key="frame" x="0.0" y="345" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REPLIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vTo-i0-nyD">
+                                    <rect key="frame" x="23" y="26" width="70" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Seravek" family="Seravek" pointSize="11.600000381469727"/>
+                                    <color key="textColor" red="0.64313725490196072" green="0.64313725490196072" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qv3-MN-6wt">
+                                    <rect key="frame" x="124" y="26" width="70" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Seravek" family="Seravek" pointSize="11.600000381469727"/>
+                                    <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIKES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FB9-Uf-8RL">
+                                    <rect key="frame" x="231" y="26" width="70" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Seravek" family="Seravek" pointSize="11.600000381469727"/>
+                                    <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QRX-yk-DSv" userLabel="Label - Replies">
+                                    <rect key="frame" x="8" y="2" width="100" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Seravek-Medium" family="Seravek" pointSize="20"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y7d-ir-3dU" userLabel="Label - Passed">
+                                    <rect key="frame" x="109" y="2" width="100" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Seravek-Medium" family="Seravek" pointSize="20"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" id="fNY-s3-1vn" userLabel="View - Likes">
+                                    <rect key="frame" x="216" y="2" width="100" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-preview-separator.png" id="vPV-oj-LLI">
+                    <rect key="frame" x="0.0" y="518" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="GpP-re-3li" userLabel="View - Bottom Container">
+                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="j14-PB-h1Q" userLabel="Button - Reply">
+                            <rect key="frame" x="4" y="5" width="50" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-preview-reply-on.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="btn-preview-lock.png"/>
+                            <state key="highlighted" image="btn-preview-reply-hl.png"/>
+                            <connections>
+                                <action selector="handleBtnReplyTouch:" destination="49" eventType="touchUpInside" id="eyV-8N-ngA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="NPr-MK-ek8" userLabel="Button - Pass">
+                            <rect key="frame" x="88" y="5" width="50" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-preview-pass-on.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="btn-preview-lock.png"/>
+                            <state key="highlighted" image="btn-preview-pass-hl.png"/>
+                            <connections>
+                                <action selector="handleBtnPassTouch:" destination="49" eventType="touchUpInside" id="u1V-fS-cvR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IMt-jA-jAP" userLabel="Button - Like" customClass="BounceButton">
+                            <rect key="frame" x="177" y="5" width="50" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-preview-like-on.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="btn-preview-like-sel.png"/>
+                            <connections>
+                                <action selector="handleBtnLikeTouch:" destination="49" eventType="touchUpInside" id="T2o-Wx-T8f"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZoT-td-M6Q" userLabel="Button - More">
+                            <rect key="frame" x="261" y="5" width="50" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-preview-more-on.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-preview-more-hl.png"/>
+                            <connections>
+                                <action selector="handleBtnMoreTouch:" destination="49" eventType="touchUpInside" id="QRb-ch-RX0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutor-preview-reply-locked.png" id="ocZ-oo-0Ha" userLabel="Image View - Reply Locked">
+                    <rect key="frame" x="-12" y="517" width="98" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutor-preview-passing-locked.png" id="BoV-BB-gGi" userLabel="Image View - Passing Locked">
+                    <rect key="frame" x="64" y="517" width="98" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.031372549019607843" green="0.031372549019607843" blue="0.031372549019607843" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="bottomContainer" destination="GpP-re-3li" id="vtf-eK-RHI"/>
+                <outlet property="btnLike" destination="IMt-jA-jAP" id="AKr-AD-1tc"/>
+                <outlet property="btnMore" destination="ZoT-td-M6Q" id="aIg-fz-7Lq"/>
+                <outlet property="btnPass" destination="NPr-MK-ek8" id="Hht-Pf-Oix"/>
+                <outlet property="btnReply" destination="j14-PB-h1Q" id="0Cy-Fl-MD2"/>
+                <outlet property="imageCreator" destination="ie0-0d-iRx" id="aee-6z-yvh"/>
+                <outlet property="imagePasser" destination="GeR-v6-wep" id="Gmq-cR-XeN"/>
+                <outlet property="imagePassingTutor" destination="BoV-BB-gGi" id="1JD-tm-PWG"/>
+                <outlet property="imageReplyTutor" destination="ocZ-oo-0Ha" id="4nO-MG-Gdb"/>
+                <outlet property="infoContainer" destination="rd4-RL-68T" id="I0a-BT-6y8"/>
+                <outlet property="labelLikes" destination="FB9-Uf-8RL" id="RcO-vI-Ann"/>
+                <outlet property="labelPassCount" destination="y7d-ir-3dU" id="OOW-H1-64x"/>
+                <outlet property="labelPassed" destination="Qv3-MN-6wt" id="x16-39-M9M"/>
+                <outlet property="labelRealname" destination="Okf-0h-QrH" id="pOR-Oc-neh"/>
+                <outlet property="labelReplies" destination="vTo-i0-nyD" id="Cc8-x2-ehx"/>
+                <outlet property="labelReplyCount" destination="QRX-yk-DSv" id="MhW-ei-CJd"/>
+                <outlet property="labelTheme" destination="Gxe-9f-Cx1" id="jhP-UF-d8o"/>
+                <outlet property="labelUsername" destination="DBe-WZ-VqC" id="9a6-3a-TBC"/>
+                <outlet property="likeContainer" destination="fNY-s3-1vn" id="jMr-SP-c0Q"/>
+                <outlet property="viewCountContainer" destination="kKF-n6-RHI" id="Kg3-Sk-Ojj"/>
+                <outlet property="viewCounts" destination="nC7-VD-BVQ" id="A5D-4f-Sdr"/>
+            </connections>
+            <point key="canvasLocation" x="279" y="401"/>
+        </view>
+        <tapGestureRecognizer id="sl6-y3-QDo">
+            <connections>
+                <action selector="handleTapCreator:" destination="49" id="JcS-SQ-WA8"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="btn-preview-like-on.png" width="30" height="20"/>
+        <image name="btn-preview-like-sel.png" width="30" height="20"/>
+        <image name="btn-preview-lock.png" width="30" height="20"/>
+        <image name="btn-preview-more-hl.png" width="30" height="20"/>
+        <image name="btn-preview-more-on.png" width="30" height="20"/>
+        <image name="btn-preview-pass-hl.png" width="30" height="20"/>
+        <image name="btn-preview-pass-on.png" width="30" height="20"/>
+        <image name="btn-preview-reply-hl.png" width="30" height="20"/>
+        <image name="btn-preview-reply-on.png" width="30" height="20"/>
+        <image name="ic-preview-separator.png" width="320" height="1"/>
+        <image name="tutor-preview-passing-locked.png" width="98" height="35"/>
+        <image name="tutor-preview-reply-locked.png" width="98" height="35"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

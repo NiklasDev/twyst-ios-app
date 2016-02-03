@@ -1,0 +1,15 @@
+//
+//  WhosHereView.h
+//  Twyst
+//
+//  Created by Niklas Ahola on 7/30/15.
+//  Copyright (c) 2015 Odd Couple Collabrations Inc. All rights reserved.
+//
+
+#import "LandingBaseView.h"
+
+@interface WhosHereView : LandingBaseView
+
++ (WhosHereView*)whosHereViewWithParent:(LandingPageViewController*)parent;
+
+@end

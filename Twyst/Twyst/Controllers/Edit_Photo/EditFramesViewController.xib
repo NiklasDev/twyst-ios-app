@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditFramesViewController">
+            <connections>
+                <outlet property="btnSave" destination="HVk-d4-Uqx" id="A5f-9s-9O6"/>
+                <outlet property="btnSelect" destination="NNo-ir-GWQ" id="CLO-5s-r0a"/>
+                <outlet property="btnSignleSave" destination="xx5-3h-o0T" id="XER-jk-dz4"/>
+                <outlet property="btnSignleTrash" destination="vgy-tS-OJa" id="p0s-Kt-I6M"/>
+                <outlet property="btnTrash" destination="EPx-IE-HXh" id="RP2-Ss-MqW"/>
+                <outlet property="collectionView" destination="t7D-mi-6Be" id="seh-xu-kS2"/>
+                <outlet property="imagePreview" destination="oqp-3X-0YI" id="mG3-kQ-dSq"/>
+                <outlet property="singleFrameContainer" destination="tkK-mg-i7B" id="XT5-R4-39E"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" id="t7D-mi-6Be">
+                    <rect key="frame" x="0.0" y="64" width="321" height="454"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="nT4-Tm-DnV">
+                        <size key="itemSize" width="107" height="107"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Nxc-Y8-WOe"/>
+                        <outlet property="delegate" destination="-1" id="bac-8t-bCt"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" id="4jJ-0P-GYd" userLabel="Header View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-bar-violet.png" id="ymz-e9-7mp">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Pjl-iV-Vj1" userLabel="Button - Cancel">
+                            <rect key="frame" x="7" y="21" width="60" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.22745098039215686" green="0.19607843137254902" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.35686274509803922" green="0.3411764705882353" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="handleBtnCloseTouch:" destination="-1" eventType="touchUpInside" id="XVL-ge-1dC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NNo-ir-GWQ" userLabel="Button - Select">
+                            <rect key="frame" x="254" y="22" width="60" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <state key="normal" title="Select">
+                                <color key="titleColor" red="0.22745098039215686" green="0.19607843137254902" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.35686274509803922" green="0.3411764705882353" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="handleBtnSelectTouch:" destination="-1" eventType="touchUpInside" id="zJZ-Ev-AX3"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frames" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D8e-yl-e02" userLabel="Label - Frames" customClass="HeaderLabel">
+                            <rect key="frame" x="55" y="21" width="210" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.19215686269999999" green="0.1843137255" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="4g7-VR-YXj" userLabel="Bottom Bar">
+                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EPx-IE-HXh" userLabel="Button - Trash">
+                            <rect key="frame" x="8" y="5" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-edit-frame-trash-on.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled" image="btn-edit-frame-trash-off.png"/>
+                            <state key="highlighted" image="btn-edit-frame-trash-hl.png"/>
+                            <connections>
+                                <action selector="handleBtnTrashTouch:" destination="-1" eventType="touchUpInside" id="Mns-ks-tKk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HVk-d4-Uqx" userLabel="Button - Save">
+                            <rect key="frame" x="270" y="5" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-edit-frame-save-on.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled" image="btn-edit-frame-save-off.png"/>
+                            <state key="selected" image="btn-edit-frame-save-sel.png"/>
+                            <connections>
+                                <action selector="handleBtnSaveTouch:" destination="-1" eventType="touchUpInside" id="Y2h-jr-phb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" id="tkK-mg-i7B" userLabel="Single Frame Container">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <imageView hidden="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="oqp-3X-0YI" userLabel="Image View - Preview">
+                            <rect key="frame" x="107" y="231" width="106" height="106"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="nGR-gP-6Um" appends="YES" id="EgG-vi-yiL"/>
+                            </connections>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eHK-ie-8DP" userLabel="Button - Back">
+                            <rect key="frame" x="-3" y="3" width="49" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-edit-back-arrow-on.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn-edit-back-arrow-hl.png"/>
+                            <connections>
+                                <action selector="handleBtnSingleBackTouch:" destination="-1" eventType="touchUpInside" id="ukJ-Ac-Jow"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" id="nvR-Vi-7nX" userLabel="Bottom Bar">
+                            <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vgy-tS-OJa" userLabel="Button - Trash">
+                                    <rect key="frame" x="8" y="5" width="40" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="btn-edit-frame-trash-on.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="disabled" image="btn-edit-frame-trash-off.png"/>
+                                    <state key="highlighted" image="btn-edit-frame-trash-hl.png"/>
+                                    <connections>
+                                        <action selector="handleBtnSingleTrashTouch:" destination="-1" eventType="touchUpInside" id="NxR-Wc-yk8"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xx5-3h-o0T" userLabel="Button - Save">
+                                    <rect key="frame" x="270" y="5" width="40" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="btn-edit-frame-save-on.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="disabled" image="btn-edit-frame-save-off.png"/>
+                                    <state key="selected" image="btn-edit-frame-save-sel.png"/>
+                                    <connections>
+                                        <action selector="handleBtnSignleSaveTouch:" destination="-1" eventType="touchUpInside" id="vmB-vi-b5s"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.97999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="465" y="381"/>
+        </view>
+        <tapGestureRecognizer id="nGR-gP-6Um">
+            <connections>
+                <action selector="handleTapPreview:" destination="-1" id="sMn-J8-VDA"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="btn-edit-back-arrow-hl.png" width="12" height="19"/>
+        <image name="btn-edit-back-arrow-on.png" width="12" height="19"/>
+        <image name="btn-edit-frame-save-off.png" width="20" height="18"/>
+        <image name="btn-edit-frame-save-on.png" width="20" height="18"/>
+        <image name="btn-edit-frame-save-sel.png" width="20" height="18"/>
+        <image name="btn-edit-frame-trash-hl.png" width="15" height="18"/>
+        <image name="btn-edit-frame-trash-off.png" width="15" height="18"/>
+        <image name="btn-edit-frame-trash-on.png" width="15" height="18"/>
+        <image name="top-bar-violet.png" width="320" height="65"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

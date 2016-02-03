@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="TLibraryTwyst" representedClassName="TLibraryTwyst" syncable="YES">
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="frameTime" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isMovie" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="totalFrames" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <relationship name="listStillframeRegular" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TStillframeRegular" inverseName="libraryTwyst" inverseEntity="TStillframeRegular" syncable="YES"/>
+    </entity>
+    <entity name="TSavedTwyst" representedClassName="TSavedTwyst" syncable="YES">
+        <attribute name="allowPass" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="allowReplies" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finalizedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isAdmin" optional="YES" attributeType="Boolean" indexed="YES" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isMyFeed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isUnread" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="memberCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ownerId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="passedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="totalFrames" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="twystId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="viewCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="visibility" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="listStillframeRegular" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TStillframeRegular" inverseName="savedTwyst" inverseEntity="TStillframeRegular" syncable="YES"/>
+    </entity>
+    <entity name="TStillframeRegular" representedClassName="TStillframeRegular" syncable="YES">
+        <attribute name="frameTime" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isMovie" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="replyIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <relationship name="libraryTwyst" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TLibraryTwyst" inverseName="listStillframeRegular" inverseEntity="TLibraryTwyst" syncable="YES"/>
+        <relationship name="savedTwyst" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TSavedTwyst" inverseName="listStillframeRegular" inverseEntity="TSavedTwyst" syncable="YES"/>
+    </entity>
+    <entity name="TTwyst" representedClassName="TTwyst" syncable="YES">
+        <attribute name="actionSenderId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="actionTimeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="actionType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="actionUsername" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="allowPass" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="allowReplies" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commentCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="dateFinalized" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="imageCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="memberCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ownerId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="passedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="replyCount" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="reported" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="twystId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userLike" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="viewCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="visibility" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TTwystNews" representedClassName="TTwystNews" syncable="YES">
+        <attribute name="commentCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="commentId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasBadge" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isUnread" optional="YES" attributeType="Boolean" indexed="YES" syncable="YES"/>
+        <attribute name="newsId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="senderId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="senderName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="twystCaption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twystId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="twystOwnerId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="TTwystOwner" representedClassName="TTwystOwner" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coverPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="followers" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="following" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="likeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="privateProfile" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="profilePicName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twystCreated" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TUser" representedClassName="TUser" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coverPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="followers" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="following" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="forgotPass" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="likeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="privateProfile" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="profilePicName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sendFriendNot" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sendLikeNot" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sendNewStringgNot" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sendPassStringgNot" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sendReplyNot" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twystCreated" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="verified" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="verifyCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TLibraryTwyst" positionX="-414" positionY="63" width="128" height="165"/>
+        <element name="TSavedTwyst" positionX="-387" positionY="90" width="128" height="315"/>
+        <element name="TStillframeRegular" positionX="-396" positionY="81" width="128" height="165"/>
+        <element name="TTwyst" positionX="-405" positionY="72" width="128" height="345"/>
+        <element name="TTwystNews" positionX="-414" positionY="63" width="128" height="240"/>
+        <element name="TTwystOwner" positionX="-405" positionY="72" width="128" height="270"/>
+        <element name="TUser" positionX="-614" positionY="-81" width="128" height="420"/>
+    </elements>
+</model>
